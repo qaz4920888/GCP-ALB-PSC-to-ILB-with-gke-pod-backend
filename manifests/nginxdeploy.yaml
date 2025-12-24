@@ -1,0 +1,48 @@
+C:\Users\Ben>type nginx.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-psc
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: nginx
+        image: nginx:1.25
+        imagePullPolicy: IfNotPresent
+        command: ["/bin/sh"]
+        args:
+          - -c
+          - |
+            echo "delay startup 60s";
+            sleep 60;
+            nginx -g 'daemon off;'
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          periodSeconds: 30
+          successThreshold: 1
+          failureThreshold: 2
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          periodSeconds: 30
+          failureThreshold: 3
