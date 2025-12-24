@@ -34,4 +34,5 @@ kubectl describe svc nginx-psc-svc
 ### 備註
 1.若是發布服務沒有選自動接受，要回自己發布的服務進去點選接受
 <img width="1121" height="1134" alt="image" src="https://github.com/user-attachments/assets/4283260d-eb0f-4e4b-b3b6-454f64bc094f" />
+<img width="2147" height="822" alt="image" src="https://github.com/user-attachments/assets/4b8003a4-3d42-428b-8aa2-0c10d51e8fdc" />
 
