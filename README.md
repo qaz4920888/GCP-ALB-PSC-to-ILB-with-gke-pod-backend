@@ -26,7 +26,8 @@ kubectl describe svc nginx-psc-svc
 <img width="1400" height="940" alt="image" src="https://github.com/user-attachments/assets/a66ca066-fb19-4c98-a766-c8b010391a5d" />
 
 3. 建立ALB放入稍早建立的psc neg後端(使用PSC就是為了不同VPC 所以要與ilb vpc不同)
-<img width="2156" height="1211" alt="image" src="https://github.com/user-attachments/assets/fb88a1b2-1687-4d20-bf53-49c8d59709f6" />
+<img width="1012" height="561" alt="image" src="https://github.com/user-attachments/assets/2b8eeab8-4109-4c72-936e-dd4d9e9c4780" />
+
 
 
 <img width="2211" height="700" alt="image" src="https://github.com/user-attachments/assets/c101800d-4fd9-4eb5-9707-4ce5938fba1d" />
