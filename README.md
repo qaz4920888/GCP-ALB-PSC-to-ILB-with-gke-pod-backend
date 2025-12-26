@@ -1,4 +1,4 @@
-# GCP-ALB-PSC-to-ILB-with-gke-pod-backend
+# GCP ALB → PSC → ILB → GKE Pod Backend Architecture
 
 ## 建立服務
 1. 建立 nginxdeploy.yaml
